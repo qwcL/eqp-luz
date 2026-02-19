@@ -1,21 +1,35 @@
+let currentIndex = 0;
+
+const images = {
+  titan: ["images/titan1.jpg", "images/titan2.jpg", "images/titan3.jpg"],
+  fan: ["images/fan1.jpg", "images/fan2.jpg"],
+  start: ["images/start1.jpg", "images/start2.jpg"]
+};
+
+let currentModel = "titan";
+
 function changeModel(model) {
+  currentModel = model;
+  currentIndex = 0;
+  document.getElementById("modelImage").src = images[model][0];
 
-  const image = document.getElementById("modelImage");
   const tabs = document.querySelectorAll(".tab");
-
   tabs.forEach(tab => tab.classList.remove("active"));
   event.target.classList.add("active");
+}
 
-  if(model === "titan") {
-    image.src = "images/titan.jpg";
+function nextImage() {
+  currentIndex++;
+  if (currentIndex >= images[currentModel].length) {
+    currentIndex = 0;
   }
+  document.getElementById("modelImage").src = images[currentModel][currentIndex];
+}
 
-  if(model === "fan") {
-    image.src = "images/fan.jpg";
+function prevImage() {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = images[currentModel].length - 1;
   }
-
-  if(model === "start") {
-    image.src = "images/start.jpg";
-  }
-
+  document.getElementById("modelImage").src = images[currentModel][currentIndex];
 }
