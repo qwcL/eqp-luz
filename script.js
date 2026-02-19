@@ -1,9 +1,9 @@
 let currentIndex = 0;
 
 const images = {
-  titan: ["images/titan1.jpg", "images/titan2.jpg", "images/titan3.jpg"],
-  fan: ["images/fan1.jpg", "images/fan2.jpg"],
-  start: ["images/start1.jpg", "images/start2.jpg"]
+  titan: ["images/titan1.jpg", "images/titan2.jpg", "images/titan3.jpg", "images/titan4.jpg"],
+  fan: ["images/fan1.jpg", "images/fan2.jpg","images/fan3.jpg", "images/fan4.jpg"],
+  start: ["images/start1.jpg", "images/start2.jpg", "images/start3.jpg", "images/start4.jpg"],
 };
 
 let currentModel = "titan";
