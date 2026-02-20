@@ -51,8 +51,8 @@ header p {
 }
 
 .content img {
-  width: 100%;
-  max-width: 600px;
+  width: 92%;
+  max-width: 480px;
   border-radius: 20px;
 }
 .carousel {
