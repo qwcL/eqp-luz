@@ -51,7 +51,7 @@ header p {
 }
 
 .content img {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   border-radius: 20px;
 }
@@ -74,4 +74,18 @@ header p {
 
 .nav:hover {
   opacity: 0.8;
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  .tab {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .carousel {
+    gap: 8px;
+  }
 }
